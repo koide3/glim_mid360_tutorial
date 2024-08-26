@@ -74,3 +74,15 @@ nano config/config_ros.json
 nano config/config_preprocess.json
 # "random_downsample_target": 5000
 ```
+
+## components
+
+```bash
+ros2 run rclcpp_components component_container
+```
+
+
+```bash
+ros2 component load /ComponentManager livox_ros_driver2 livox_ros::DriverNode -p user_config_path:=/home/koide/ros2_ws/src/livox_ros_driver2/config/MID360_config.json
+ros2 component load /ComponentManager glim_ros glim::GlimROS -p config_path:=$(realpath config)
+```
